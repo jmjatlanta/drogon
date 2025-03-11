@@ -47,9 +47,6 @@ struct ColumnInfo
 inline std::string nameTransform(const std::string &origName, bool isType)
 {
     auto str = origName;
-    std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c) {
-        return tolower(c);
-    });
     std::string::size_type startPos = 0;
     std::string::size_type pos;
     std::string ret;

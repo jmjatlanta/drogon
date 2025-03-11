@@ -1015,10 +1015,6 @@ void create_model::createModel(const std::string &path,
                 for (int i = 0; i < (int)tables.size(); ++i)
                 {
                     auto tableName = tables[i].asString();
-                    std::transform(tableName.begin(),
-                                   tableName.end(),
-                                   tableName.begin(),
-                                   [](unsigned char c) { return tolower(c); });
                     std::cout << "table name:" << tableName << std::endl;
                     createModelClassFromMysql(path,
                                               client,
@@ -1090,10 +1086,6 @@ void create_model::createModel(const std::string &path,
                 for (int i = 0; i < (int)tables.size(); ++i)
                 {
                     auto tableName = tables[i].asString();
-                    std::transform(tableName.begin(),
-                                   tableName.end(),
-                                   tableName.begin(),
-                                   [](unsigned char c) { return tolower(c); });
                     std::cout << "table name:" << tableName << std::endl;
                     createModelClassFromSqlite3(path,
                                                 client,
