@@ -66,8 +66,8 @@ inline std::string nameTransform(const std::string &origName, bool isType)
         }
         while (str[pos] == '_' || str[pos] == '.')
             ++pos;
-        //if (str[pos] >= 'a' && str[pos] <= 'z')
-        //    str[pos] += ('A' - 'a');
+        if (str[pos] >= 'a' && str[pos] <= 'z')
+            str[pos] += ('A' - 'a');
         startPos = pos;
     } while (1);
     if (isType && ret[0] >= 'a' && ret[0] <= 'z')
