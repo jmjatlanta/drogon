@@ -462,7 +462,7 @@ void create_model::createModelClassFromMysql(
     auto className = nameTransform(tableName, true);
     HttpViewData data;
     data["className"] = className;
-    data["tableName"] = toLower(tableName);
+    data["tableName"] = tableName;
     data["hasPrimaryKey"] = (int)0;
     data["primaryKeyName"] = "";
     data["dbName"] = dbname_;
